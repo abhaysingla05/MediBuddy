@@ -51,39 +51,41 @@ export default function MedicationLandingPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f3e9] text-[#2c2c2c]">
-      <header className="px-4 lg:px-6 h-20 flex items-center border-b border-[#e0d5c0]">
-        <Link className="flex items-center justify-center" href="#">
-          <Stethoscope className="h-8 w-8 text-[#8b7d6b]" />
-          <span className="ml-2 text-xl font-semibold text-[#8b7d6b]">MediBuddy</span>
-        </Link>
-        <nav className="ml-auto flex gap-6">
-          <Link className="text-sm font-medium text-[#5a4f41] hover:text-[#8b7d6b] transition-colors" href="#">
-            How It Works
+      <header className="w-full border-b border-[#e0d5c0]">
+        <div className="container mx-auto px-6 lg:px-8 h-20 flex items-center">
+          <Link className="flex items-center justify-center" href="#">
+            <Stethoscope className="h-8 w-8 text-[#8b7d6b]" />
+            <span className="ml-2 text-xl font-semibold text-[#8b7d6b]">MediBuddy</span>
           </Link>
-          <Link className="text-sm font-medium text-[#5a4f41] hover:text-[#8b7d6b] transition-colors" href="#">
-            About Us
-          </Link>
-          <a 
-            href="mailto:abhaysingla05@gmail.com" 
-            className="text-sm font-medium text-[#5a4f41] hover:text-[#8b7d6b] transition-colors flex items-center gap-2"
-           
-          >
-            <MessageCircle className="h-4 w-4" />
-            Contact
-          </a>
-        </nav>
+          <nav className="ml-auto flex gap-6">
+            <Link className="text-sm font-medium text-[#5a4f41] hover:text-[#8b7d6b] transition-colors" href="#">
+              How It Works
+            </Link>
+            <Link className="text-sm font-medium text-[#5a4f41] hover:text-[#8b7d6b] transition-colors" href="#">
+              About Us
+            </Link>
+            <a 
+              href="mailto:abhaysingla05@gmail.com" 
+              className="text-sm font-medium text-[#5a4f41] hover:text-[#8b7d6b] transition-colors flex items-center gap-2"
+             
+            >
+              <MessageCircle className="h-4 w-4" />
+              Contact
+            </a>
+          </nav>
+        </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-8 md:py-12 lg:py-22">
-          <div className="container px-4 md:px-6 max-w-5xl">
-            <div className="flex flex-col items-center space-y-8 text-center">
+        <section className="w-full py-8 md:py-12 lg:py-24">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-[800px] mx-auto text-center space-y-8">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-[#5a4f41]">
                 Your Wellness Journey Begins Here
               </h1>
               <p className="mx-auto max-w-[700px] text-[#8b7d6b] text-lg md:text-xl">
                 Discover personalized care and expert advice tailored to your unique health needs.
               </p>
-              <div className="w-full max-w-md space-y-4">
+              <div className="w-full max-w-md mx-auto space-y-4">
                 <Textarea 
                   className="min-h-[120px] bg-white border-[#e0d5c0] focus:border-[#8b7d6b] focus:ring-[#8b7d6b] resize-none" 
                   placeholder="Describe your symptoms here..." 
@@ -105,7 +107,7 @@ export default function MedicationLandingPage() {
 
         {/* Our Approach Section */}
         <section className="w-full py-20 md:py-32 bg-[#e0d5c0]">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-6 lg:px-8">
             <div className="flex flex-col items-center space-y-8 text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#5a4f41]">Our Approach</h2>
               <p className="max-w-[600px] text-[#8b7d6b] text-lg">
@@ -207,15 +209,15 @@ export default function MedicationLandingPage() {
         )}
 
         <section className="w-full py-20 md:py-32">
-          <div className="container px-4 md:px-6 max-w-5xl">
-            <div className="flex flex-col items-center space-y-8 text-center">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-[800px] mx-auto text-center space-y-8">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#5a4f41]">
                 Begin Your Wellness Journey
               </h2>
               <p className="max-w-[600px] text-[#8b7d6b] text-lg">
                 Take the first step towards a healthier you. Our experts are ready to guide you.
               </p>
-              <div className="w-full max-w-md space-y-4">
+              <div className="w-full max-w-md mx-auto space-y-4">
                 <Input 
                   className="bg-white border-[#e0d5c0] focus:border-[#8b7d6b] focus:ring-[#8b7d6b]" 
                   placeholder="Enter your email" 
@@ -233,51 +235,53 @@ export default function MedicationLandingPage() {
           </div>
         </section>
       </main>
-      <footer className="py-6 px-4 md:px-6 border-t border-[#e0d5c0]">
-        <div className="container flex flex-col items-center gap-4">
-          <p className="text-sm text-[#8b7d6b]">
-            © 2024 MediBuddy. All rights reserved.
-          </p>
-          <p className="text-sm text-[#8b7d6b] flex items-center gap-2">
-            Crafted with ❤️ by <a 
-              href="mailto:abhaysingla05@gmail.com"
-              className="font-medium hover:text-[#5a4f41] transition-colors"
-            >
-              Abhay Singla
-            </a>
-          </p>
-          <div className="flex items-center gap-6">
-            <Link className="text-sm text-[#8b7d6b] hover:text-[#5a4f41] transition-colors" href="#">
-              Terms of Service
-            </Link>
-            <Link className="text-sm text-[#8b7d6b] hover:text-[#5a4f41] transition-colors" href="#">
-              Privacy Policy
-            </Link>
-            <div className="flex items-center gap-4">
-              <a 
-                href="https://github.com/abhaysingla05" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[#8b7d6b] hover:text-[#5a4f41] transition-colors"
+      <footer className="w-full border-t border-[#e0d5c0]">
+        <div className="container mx-auto py-6 px-6 lg:px-8">
+          <div className="container flex flex-col items-center gap-4">
+            <p className="text-sm text-[#8b7d6b]">
+              © 2024 MediBuddy. All rights reserved.
+            </p>
+            <p className="text-sm text-[#8b7d6b] flex items-center gap-2">
+              Crafted with ❤️ by <a 
+                href="mailto:abhaysingla05@gmail.com"
+                className="font-medium hover:text-[#5a4f41] transition-colors"
               >
-                <Github className="h-5 w-5" />
+                Abhay Singla
               </a>
-              <a 
-                href="https://www.linkedin.com/in/abhay-singla/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[#8b7d6b] hover:text-[#5a4f41] transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://x.com/AbhaySingla05" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[#8b7d6b] hover:text-[#5a4f41] transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
+            </p>
+            <div className="flex items-center gap-6">
+              <Link className="text-sm text-[#8b7d6b] hover:text-[#5a4f41] transition-colors" href="#">
+                Terms of Service
+              </Link>
+              <Link className="text-sm text-[#8b7d6b] hover:text-[#5a4f41] transition-colors" href="#">
+                Privacy Policy
+              </Link>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://github.com/abhaysingla05" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[#8b7d6b] hover:text-[#5a4f41] transition-colors"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/abhay-singla/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[#8b7d6b] hover:text-[#5a4f41] transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a 
+                  href="https://x.com/AbhaySingla05" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[#8b7d6b] hover:text-[#5a4f41] transition-colors"
+                >
+                  <Twitter className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
