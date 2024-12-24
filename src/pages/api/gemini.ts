@@ -1,6 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// Add proper error typing
+interface GeminiError {
+  message: string;
+  status?: number;
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method Not Allowed" });
@@ -55,8 +61,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     res.status(200).json({ specialist, medications, instantReliefTips });
-  } catch (err: any) {
-    console.error(err.message);
-    res.status(500).json({ message: err.message || "Internal Server Error" });
+  } catch (error: unknown) {
+    const geminiError = error as GeminiError;
+    console.error("Error:", geminiError);
+    res.status(500).json({ error: geminiError.message });
   }
 }

@@ -8,9 +8,23 @@ import { CardContent, Card } from "@/components/ui/card"
 import { Stethoscope, Pill, MessageCircle, ChevronRight, X, User, Lightbulb, Github, Linkedin, Twitter } from 'lucide-react'
 import Link from "next/link"
 
+// Add this interface right after imports and before the component
+interface AIResponse {
+  specialist: string;
+  medications: string[];
+  instantReliefTips: string[];
+}
+
+// Add this interface before the FeatureCard component
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
 export default function MedicationLandingPage() {
   const [symptoms, setSymptoms] = useState('');
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<AIResponse | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSymptomSubmit = async () => {
@@ -272,7 +286,7 @@ export default function MedicationLandingPage() {
   )
 }
 
-function FeatureCard({ icon, title, description }) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card className="bg-white border-none shadow-md">
       <CardContent className="flex flex-col items-center space-y-4 p-6">
